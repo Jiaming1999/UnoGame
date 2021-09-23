@@ -22,6 +22,9 @@ public class unoController {
 	 * @param game
 	 */
 	public unoController(unoGUI unoGUI, Game game) {
+		if (unoGUI == null) {
+			return;
+		}
 		if (game.isGameOver()) {
 			new gameOverGUI("Game Over, Winner is: " + game.getWinner());
 			unoGUI.getFrame().dispose();
@@ -57,6 +60,9 @@ public class unoController {
 	 * @param unoGUI
 	 */
 	public void afterPlayed(Card played, Game game, unoGUI unoGUI) {
+		if (unoGUI == null) {
+			return;
+		}
 		if (played == null) {
 			unoGUI.getFrame().dispose();
 			new invalidMsgGUI("<html>no valid card played, receiving penalty, <br/>now please switch player, close to confirm<html/>",game,unoGUI);
