@@ -336,6 +336,10 @@ public class Game {
 		}else if (validColor == Card.Color.ANY) {
 			return card.getCardNumber() == validNumber;
 		}
+		return specialCard(card);
+	}
+
+	public boolean specialCard(Card card) {
 		switch (validNumber) {
 			case ADD2:
 				return card.getCardColor() == validColor 
