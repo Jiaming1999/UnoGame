@@ -16,7 +16,7 @@ import GUI.wildCardGUI;
 
 public class unoController {
 
-	/**
+	/**for aws
 	 * constructor for main game page GUI's controlling file
 	 * @param unoGUI
 	 * @param game
